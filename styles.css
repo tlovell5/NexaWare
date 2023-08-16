@@ -1,0 +1,96 @@
+/* Reset some default browser styles */
+body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the whole page */
+body {
+    font-family: 'Gorditas', cursive;
+    color: #32424e;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5eb1bc;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.main-image {
+    background-image: url('mainpicture.png');
+    background-size: cover;
+    height: 50vh; /* Control the height of the image section */
+    position: relative;
+}
+
+.info-text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(94, 177, 188, 0.8); 
+    color: white;
+    padding: 20px;
+    width: 40%;
+    text-align: right;
+}
+
+.content-section {
+    background-color: #f3e7d2;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.white-box {
+    background-color: #fffffe;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+    background-color: #5eb1bc;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#contact-form button {
+    background-color: #1d465b;
+    color: #acd2dc;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
