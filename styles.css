@@ -1,96 +1,166 @@
-/* Reset some default browser styles */
-body, h1, h2, ul, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Apply a background color to the whole page */
+/* Global Styles */
 body {
-    font-family: 'Gorditas', cursive;
-    color: #32424e;
+    margin: 0;
+    font-family: 'Gordon Black', sans-serif;
+    background-color: #f3e7d2;
     line-height: 1.6;
 }
 
-header {
-    background-color: #5eb1bc;
-    text-align: center;
-    padding: 10px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+.header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #357484, #5eb1bc, #357484);
+    padding: 0.5em 1em;
+    /*border-radius: 30px 30px 30px 30px;*/
 }
 
-header #logo {
-    width: 50px;
-    margin-left: 20px;
+.logo img {
+    height: 80px;
 }
 
-header h1 {
-    margin: 0;
-    color: white;
+.logo-text {
+    flex-grow: 1;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #ffffff;
 }
 
-header h2 {
-    color: #fff;
-    font-size: 20px;
-    margin-right: 20px;
+.slogan {
+    margin-right: 5%;
+    font-size: 18px;
+    color: #ffffff;
 }
 
+/* Main Section */
 .main-image {
-    background-image: url('mainpicture.png');
+    width: 100%;
+    height: auto;
+    background: url('mainpicture.png') no-repeat center;
     background-size: cover;
-    height: 50vh; /* Control the height of the image section */
-    position: relative;
 }
 
-.info-text {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(94, 177, 188, 0.8); 
+.info-box {
+    background-color: rgba(94, 177, 188, 0.8);
+    padding: 1em;
     color: white;
-    padding: 20px;
-    width: 40%;
-    text-align: right;
+    max-width: 25%;
+    position: absolute;
+    right: 5%;
+    top: 20%;
 }
 
+/* White boxes section */
 .content-section {
-    background-color: #f3e7d2;
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2em;
+    
 }
 
 .white-box {
     background-color: #fffffe;
-    width: 30%;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    height: 300px; /* Increased height */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .contact-section {
     background-color: #5eb1bc;
-    padding: 40px 0;
+    padding: 1em;
     text-align: center;
 }
 
-#contact-form {
-    width: 50%;
+.contact-form {
+    max-width: 400px;
     margin: 0 auto;
 }
 
-#contact-form input,
-#contact-form textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    margin-bottom: 20px;
     padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-#contact-form button {
+.contact-form button {
     background-color: #1d465b;
-    color: #acd2dc;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #163d47;
+}
+/* Media Queries */
+@media (max-width: 768px) { /* Tablet size */
+    .content-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-box {
+        max-width: 70%;
+        right: 5%;
+        top: 5%;
+    }
+
+    .header .logo img {
+        height: 40px;
+    }
+
+    .header .logo-text {
+        font-size: 20px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile size */
+    .content-section {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        max-width: 90%;
+        right: 5%;
+        top: 5%;
+    }
+
+    .header .logo img {
+        height: 30px;
+    }
+
+    .header .logo-text {
+        font-size: 18px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* For larger screens, make .main-image bigger */
+@media (min-width: 769px) {
+    .main-image {
+        height: 600px; /* Set to desired height */
+    }
 }
