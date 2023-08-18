@@ -164,3 +164,22 @@ a {
         height: 600px; /* Set to desired height */
     }
 }
+
+#form-response {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#form-response.success {
+    color: #4CAF50;
+    background-color: #DFF2BF;
+    display: block;
+}
+
+#form-response.error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    display: block;
+}
